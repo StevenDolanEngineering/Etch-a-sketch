@@ -20,11 +20,15 @@ function createGrid(num) {
 
     let totalSquares  = Math.pow(num, 2);
 
+    let boxSize = 960 / num;
+
     const gridSize = document.getElementById('container');
 
     for (let i = 0; i < totalSquares; i++) {
         const newDiv = document.createElement('div');
         newDiv.className = 'box';
+        newDiv.style.width = boxSize;
+        newDiv.style.heigh = boxSize;
         gridSize.appendChild(newDiv);
     }
 }
