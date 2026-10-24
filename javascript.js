@@ -29,12 +29,22 @@ function createGrid(num) {
         newDiv.className = 'box';
         newDiv.style.width = `${boxSize}px`;
         newDiv.style.height = `${boxSize}px`;
-        boxes.addEventListener('mouseenter', (e) => {
+        newDiv.addEventListener('mouseenter', (e) => {
             e.target.style.background = 'black';
         });
         gridSize.appendChild(newDiv);
     }
 }
 
+function makeNewGrid() {
+    const gridSize = document.getElementById('container');
+    gridSize.innerHTML = '';
+    let newNumber = parseInt(prompt('How large would you like to make your grid size? '));
+    createGrid(newNumber);
+}
+
 createGrid(numOfDivs);
 
+const btn = document.querySelector('#btn');
+
+btn.addEventListener('click', makeNewGrid);
