@@ -9,4 +9,6 @@
     width: 960px;
     height: 960px;
     background-color: beige;
+    display: flex;
+    flex-wrap: wrap;
 }
