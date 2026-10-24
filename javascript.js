@@ -27,8 +27,8 @@ function createGrid(num) {
     for (let i = 0; i < totalSquares; i++) {
         const newDiv = document.createElement('div');
         newDiv.className = 'box';
-        newDiv.style.width = boxSize;
-        newDiv.style.heigh = boxSize;
+        newDiv.style.width = `${boxSize}px`;
+        newDiv.style.height = `${boxSize}px`;
         gridSize.appendChild(newDiv);
     }
 }
